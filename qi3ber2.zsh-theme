@@ -5,7 +5,7 @@ function load_average {
   if [ -f '/proc/loadavg' ]; then
     LA=`cut -d\  -f1 < /proc/loadavg`
   else
-    if [ -f '/bin/uptime' ]; then
+    if [ -f '/usr/bin/uptime' ]; then
       UPTIME='/bin/uptime'
     elif [ -f '/usr/bsd/uptime' ]; then
       UPTIME='/usr/bsd/uptime'
