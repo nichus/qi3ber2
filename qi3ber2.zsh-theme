@@ -12,7 +12,7 @@ function load_average {
     else
       UPTIME='/usr/ucb/uptime'
     fi
-    LA=${${UPTIME[(w)-3]}%,}
+    LA=${$($UPTIME)[-3]}
   fi
   printf "%05.2f\n" ${LA}
 }
