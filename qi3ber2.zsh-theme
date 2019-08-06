@@ -1,5 +1,5 @@
 # qi3ber2.zsh-theme
-# screenshot: none
+# screenshot: https://github.com/nichus/qi3ber2/web/example.png
 
 function load_average {
   if [ -f '/proc/loadavg' ]; then
