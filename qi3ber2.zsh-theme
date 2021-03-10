@@ -1,6 +1,14 @@
 # qi3ber2.zsh-theme
 # screenshot: none
 
+_qi3ber2_venv() {
+  PYTHON="🐍"
+  if [ -n "$VIRTUAL_ENV" ]; then
+    local venv
+    venv=$(basename ${VIRTUAL_ENV})
+    echo " ${PYTHON}${venv}"
+  fi
+}
 function load_average {
   if [ -f '/proc/loadavg' ]; then
     LA=`cut -d\  -f1 < /proc/loadavg`
@@ -81,6 +89,6 @@ function {
 
   local return_status="%(?.   .$ec%3<<000%?$bc)"
 
-  PROMPT="$lc$ul$ml$nc $hc%m$nc:$bc%y$ec♥$bc"'$(load_average)'" $lc$mr$ml$nc $pc"'$(_fishy_collapsed_wd)'"$nc $lc$vl$nc "'$(git_prompt_info)'$'\n'"$lc$ll$ml$nc $bc%D{%m/%d %H:%M} %! ${return_status} $lc$vl$nc %(!.#.$) "
+  PROMPT="$lc$ul$ml$nc $hc%m$nc:$bc%y$ec♥$bc"'$(load_average)'" $lc$mr$ml$nc $pc"'$(_fishy_collapsed_wd)'"$nc $lc$vl$nc "'$(git_prompt_info)''$(_qi3ber2_venv)'$'\n'"$lc$ll$ml$nc $bc%D{%m/%d %H:%M} %! ${return_status} $lc$vl$nc %(!.#.$) "
   PS2=$' %_${lc}>${nc} '
 }
