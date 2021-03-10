@@ -2,7 +2,7 @@
 # screenshot: https://github.com/nichus/qi3ber2/web/example.png
 
 _qi3ber2_venv() {
-  PYTHON="🐍"
+  PYTHON="%{$fg[green]%}🐍%{$fg[default]%}"
   if [ -n "$VIRTUAL_ENV" ]; then
     local venv
     venv=$(basename ${VIRTUAL_ENV})
