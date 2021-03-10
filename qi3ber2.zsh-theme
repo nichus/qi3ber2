@@ -57,9 +57,9 @@ function {
     ZSH_THEME_GIT_PROMPT_PREFIX=""
     ZSH_THEME_GIT_PROMPT_SUFFIX=" $lc$vl$nc"
 
-    ZSH_THEME_GIT_PROMPT_BEHIND=" %{$fg[red]%}⪕"
-    ZSH_THEME_GIT_PROMPT_AHEAD=" %{$fg[yellow]%}⪖"
-    ZSH_THEME_GIT_PROMPT_DIVERGED=" %{$fg[red]%}⫨"
+    ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[red]%}⪕ᐁ"⇡
+    ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[yellow]%}⪖ᐃ"
+    ZSH_THEME_GIT_PROMPT_DIVERGED="%{$fg[red]%}⫨↔"
     ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%} ✚"
     ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%} ✹"
     ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} ✖"
@@ -72,9 +72,9 @@ function {
     ZSH_THEME_GIT_PROMPT_PREFIX=""
     ZSH_THEME_GIT_PROMPT_SUFFIX=" $vl"
 
-    ZSH_THEME_GIT_PROMPT_BEHIND=" ⪕"
-    ZSH_THEME_GIT_PROMPT_AHEAD=" ⪖"
-    ZSH_THEME_GIT_PROMPT_DIVERGED=" ⫨"
+    ZSH_THEME_GIT_PROMPT_BEHIND=" ᐁ"
+    ZSH_THEME_GIT_PROMPT_AHEAD=" ᐃ"
+    ZSH_THEME_GIT_PROMPT_DIVERGED=" ↔"
     ZSH_THEME_GIT_PROMPT_ADDED=" ✚"
     ZSH_THEME_GIT_PROMPT_MODIFIED=" ✹"
     ZSH_THEME_GIT_PROMPT_DELETED=" ✖"
@@ -84,8 +84,8 @@ function {
 
     RPROMPT='$(vi_mode_prompt_info)$(git_prompt_status)'
   fi
-  ZSH_THEME_GIT_PROMPT_DIRTY=""
-  ZSH_THEME_GIT_PROMPT_CLEAN=""
+  ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}"
+  ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[default]%}"
 
   local return_status="%(?.   .$ec%3<<000%?$bc)"
 
