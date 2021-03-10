@@ -84,8 +84,8 @@ function {
 
     RPROMPT='$(vi_mode_prompt_info)$(git_prompt_status)'
   fi
-  ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}"
-  ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[default]%}"
+  ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}❖%{$fg[default]%}"
+  ZSH_THEME_GIT_PROMPT_CLEAN=""
 
   local return_status="%(?.   .$ec%3<<000%?$bc)"
 
