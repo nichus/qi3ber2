@@ -1,6 +1,7 @@
 # qi3ber2.zsh-theme
 # screenshot: https://github.com/nichus/qi3ber2/web/example.png
 
+(exit 0)
 _qi3ber2_venv() {
   PYTHON="%{$fg[green]%}🐍%{$fg[default]%}"
   if [ -n "$VIRTUAL_ENV" ]; then
